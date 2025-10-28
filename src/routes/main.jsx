@@ -77,15 +77,16 @@ export default function Main() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        transform: value === item.value ? "scale(1.2)" : "scale(1)", // scale up active
         transition: "all 0.3s ease", // smooth fade
         "::after": {
             content: '""',
             position: "absolute",
             display: value === item.value ? "block" : "none",
-            bottom: -5,
+            bottom: 2,
             bgcolor: "#1976d2",
             borderRadius: "100%",
-            p: 0.5
+            p: 0.3
         }
       }}
     >

@@ -44,6 +44,7 @@ export default function Main() {
           borderRadius: "30px",
           boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
           zIndex: 1000,
+          overflow: "hidden",
         }}
         elevation={3}
       >
@@ -55,36 +56,53 @@ export default function Main() {
             borderRadius: "30px",
             height: "70px",
             backgroundColor: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+
           }}
         >
           {navItems.map((item) => (
             <BottomNavigationAction
-              key={item.value}
-              label={item.label}
-              value={item.value}
-              icon={
-                <Box
-                  sx={{
-                    backgroundColor:
-                      value === item.value ? "#1976d2" : "transparent",
-                    p: 1.2,
-                    borderRadius: "10px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {React.cloneElement(item.icon, {
-                    sx: {
-                      color:
-                        value === item.value
-                          ? "#fff"
-                          : "rgba(0,0,0,0.5)",
-                    },
-                  })}
-                </Box>
-              }
-            />
+  key={item.value}
+//   label={item.label}
+  value={item.value}
+  icon={
+    <Box
+      sx={{
+        color: value === item.value ? "#1976d2" : "rgba(0,0,0,0.5)", // icon color
+        borderRadius: "50%",
+        width: 45,
+        height: 45,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "all 0.3s ease", // smooth fade
+        "::after": {
+            content: '""',
+            position: "absolute",
+            display: value === item.value ? "block" : "none",
+            bottom: -5,
+            bgcolor: "#1976d2",
+            borderRadius: "100%",
+            p: 0.5
+        }
+      }}
+    >
+      {React.cloneElement(item.icon, {
+        sx: { fontSize: 26 }, // consistent icon size
+      })}
+    </Box>
+  }
+  sx={{
+    "& .MuiBottomNavigationAction-label": {
+      display: value === item.value ? "block" : "none", // only show on active
+      color: "#1976d2",
+      fontSize: "0.85rem",
+    },
+  }}
+/>
+
           ))}
         </BottomNavigation>
       </Paper>

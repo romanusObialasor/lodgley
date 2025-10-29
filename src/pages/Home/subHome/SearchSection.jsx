@@ -109,78 +109,126 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
 
       {/* Filter Drawer */}
       <Drawer
-        anchor="bottom"
-        open={openFilter}
-        onClose={() => setOpenFilter(false)}
-        PaperProps={{
-          sx: {
-            borderTopLeftRadius: "20px",
-            borderTopRightRadius: "20px",
-            p: 3,
-          },
-        }}
-      >
-        <Typography variant="h6" gutterBottom>
-          Filter by
-        </Typography>
+  anchor="bottom"
+  open={openFilter}
+  onClose={() => setOpenFilter(false)}
+  PaperProps={{
+    sx: {
+      borderTopLeftRadius: "20px",
+      borderTopRightRadius: "20px",
+      p: 3,
+      pb: 4
+    },
+  }}
+>
+  {/* Header */}
+  <Box
+    sx={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      mb: 2,
+    }}
+  >
+    <Typography variant="h6" sx={{ fontWeight: 600 }}>
+      Filter by
+    </Typography>
+    <IconButton onClick={() => setOpenFilter(false)}>
+      <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>×</span>
+    </IconButton>
+  </Box>
 
-        {/* Price Range */}
-        <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1">Price Range (₦)</Typography>
-          <Slider
-            value={filters.priceRange}
-            onChange={handlePriceChange}
-            valueLabelDisplay="auto"
-            min={20000}
-            max={300000}
-            step={10000}
-          />
-        </Box>
+  {/* Price Range */}
+  <Box sx={{ mb: 3 }}>
+    <Typography variant="subtitle1" sx={{ mb: 1 }}>
+      Price Range (₦)
+    </Typography>
+    <Slider
+      value={filters.priceRange}
+      onChange={handlePriceChange}
+      valueLabelDisplay="on"
+      min={20000}
+      max={300000}
+      step={10000}
+      sx={{
+        mt: 5
+      }}
+    />
+  </Box>
 
-        {/* Amenities */}
-        <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1">Amenities</Typography>
-          <FormGroup>
-            {amenitiesList.map((a) => (
-              <FormControlLabel
-                key={a}
-                control={
-                  <Checkbox
-                    checked={filters.amenities.includes(a)}
-                    onChange={() => handleAmenityChange(a)}
-                  />
-                }
-                label={a}
+  {/* Amenities */}
+  <Box sx={{ mb: 3 }}>
+    <Typography variant="subtitle1" sx={{ mb: 1 }}>
+      Amenities
+    </Typography>
+    <FormGroup>
+      {["Electricity", "Water System", "Toilet & Bathroom", "Tiled Floor"].map(
+        (a) => (
+          <FormControlLabel
+            key={a}
+            control={
+              <Checkbox
+                checked={filters.amenities.includes(a)}
+                onChange={() => handleAmenityChange(a)}
               />
-            ))}
-          </FormGroup>
-        </Box>
+            }
+            label={a}
+          />
+        )
+      )}
+    </FormGroup>
+  </Box>
 
-        {/* Type */}
-        <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1">Type</Typography>
-          <RadioGroup value={filters.type} onChange={handleTypeChange}>
-            {typeOptions.map((t) => (
-              <FormControlLabel key={t} value={t} control={<Radio />} label={t} />
-            ))}
-          </RadioGroup>
-        </Box>
+  {/* Type */}
+  <Box sx={{ mb: 3 }}>
+    <Typography variant="subtitle1" sx={{ mb: 1 }}>
+      Type
+    </Typography>
+    <RadioGroup value={filters.type} onChange={handleTypeChange}>
+      {typeOptions.map((t) => (
+        <FormControlLabel key={t} value={t} control={<Radio />} label={t} />
+      ))}
+    </RadioGroup>
+  </Box>
 
-        {/* Apply Button */}
-        <Button
-          fullWidth
-          variant="contained"
-          onClick={handleApplyFilters}
-          sx={{
-            mt: 2,
-            borderRadius: "12px",
-            backgroundColor: "#1976d2",
-            "&:hover": { backgroundColor: "#1565c0" },
-          }}
-        >
-          Apply Filters
-        </Button>
-      </Drawer>
+  {/* Buttons */}
+  <Box sx={{ display: "flex", gap: 2 }}>
+    <Button
+      variant="outlined"
+      fullWidth
+      onClick={() =>
+        setFilters({
+          priceRange: [50000, 200000],
+          amenities: [],
+          type: "",
+        })
+      }
+      sx={{
+        borderRadius: "12px",
+        textTransform: "none",
+        color: "#1976d2",
+        borderColor: "#1976d2",
+        "&:hover": { backgroundColor: "#e3f2fd" },
+      }}
+    >
+      Clear All
+    </Button>
+    <Button
+      variant="contained"
+      fullWidth
+      onClick={handleApplyFilters}
+      sx={{
+        borderRadius: "12px",
+        textTransform: "none",
+        backgroundColor: "#1976d2",
+        "&:hover": { backgroundColor: "#1565c0" },
+      }}
+    >
+      Apply Changes
+    </Button>
+  </Box>
+</Drawer>
+
     </Box>
   );
 }

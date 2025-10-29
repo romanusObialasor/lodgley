@@ -1,14 +1,19 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import Header from "./Header";
 
 const Home = () => {
   return (
-    <Box sx={{ p: 2, textAlign: "center" }}>
-      <Typography variant="h5" color="primary">
-        Welcome to Lodgely 🏠
-      </Typography>
-    </Box>
+    <div
+    style={{
+        // backgroundColor: "red",
+        height: "100vh",
+    }}>
+      <Header />
+    </div>
   );
 };
 
 export default Home;
+
+
+

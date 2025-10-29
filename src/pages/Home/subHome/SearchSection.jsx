@@ -117,7 +117,6 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
       borderTopLeftRadius: "20px",
       borderTopRightRadius: "20px",
       p: 3,
-      pb: 4
     },
   }}
 >
@@ -140,7 +139,7 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
 
   {/* Price Range */}
   <Box sx={{ mb: 3 }}>
-    <Typography variant="subtitle1" sx={{ mb: 1 }}>
+    <Typography variant="subtitle1" sx={{ mb: 1, fontWeight:600 }}>
       Price Range (₦)
     </Typography>
     <Slider
@@ -151,14 +150,14 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
       max={300000}
       step={10000}
       sx={{
-        mt: 5
+        mt: 4
       }}
     />
   </Box>
 
   {/* Amenities */}
   <Box sx={{ mb: 3 }}>
-    <Typography variant="subtitle1" sx={{ mb: 1 }}>
+    <Typography variant="subtitle1" sx={{ mb: 1, fontWeight:600 }}>
       Amenities
     </Typography>
     <FormGroup>
@@ -181,7 +180,7 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
 
   {/* Type */}
   <Box sx={{ mb: 3 }}>
-    <Typography variant="subtitle1" sx={{ mb: 1 }}>
+    <Typography variant="subtitle1" sx={{ mb: 1,fontWeight:600 }}>
       Type
     </Typography>
     <RadioGroup value={filters.type} onChange={handleTypeChange}>
@@ -204,7 +203,7 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
         })
       }
       sx={{
-        borderRadius: "12px",
+        borderRadius: "8px",
         textTransform: "none",
         color: "#1976d2",
         borderColor: "#1976d2",
@@ -218,7 +217,7 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
       fullWidth
       onClick={handleApplyFilters}
       sx={{
-        borderRadius: "12px",
+        borderRadius: "8px",
         textTransform: "none",
         backgroundColor: "#1976d2",
         "&:hover": { backgroundColor: "#1565c0" },

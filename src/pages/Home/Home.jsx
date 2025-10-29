@@ -26,7 +26,6 @@ const Home = () => {
       }>
         {
             data.map((data)=>(
-
                 <ApartmentCard apartment={data}/>
             ))
         }

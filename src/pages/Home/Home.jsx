@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./subHome/Header";
+import SearchSection from "./subHome/SearchSection";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         height: "100vh",
     }}>
       <Header />
+      <SearchSection />
     </div>
   );
 };

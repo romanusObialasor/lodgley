@@ -1,6 +1,6 @@
 // src/pages/Home/subHome/Header.jsx
 import React from "react";
-import { Avatar, Box, Typography, IconButton, Badge, Paper } from "@mui/material";
+import { Avatar, Box, Typography, IconButton, Badge } from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 export default function Header() {

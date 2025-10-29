@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Cozy Apartment",
+    "image": "/data/bedroom1.jpg",
+    "type": "Self Contain",
+    "price": 120000,
+    "amenities": ["Water", "Electricity", "Kitchen"],
+    "description": "A cozy apartment located in the heart of the city with all modern amenities."
+  },
+  {
+    "id": 2,
+    "name": "Comfort Lodge",
+    "image": "/data/bedroom2.webp",
+    "type": "Single Room",
+    "price": 80000,
+    "amenities": ["Water", "Electricity"],
+    "description": "Affordable single room apartment close to JOSTUM campus with reliable water supply."
+  },
+  {
+    "id": 3,
+    "name": "Palm View Apartment",
+    "image": "/data/bedroom3.webp",
+    "type": "Self Contain",
+    "price": 150000,
+    "amenities": ["Water", "Electricity", "Tile", "Kitchen"],
+    "description": "Modern self contain apartment with tiled floors and constant electricity."
+  },
+  {
+    "id": 4,
+    "name": "Grace Villa",
+    "image": "/data/bedroom4.jpg",
+    "type": "One Bedroom",
+    "price": 180000,
+    "amenities": ["Water", "Electricity", "Kitchen", "Bathroom"],
+    "description": "Spacious one bedroom flat ideal for students and young professionals."
+  },
+  {
+    "id": 5,
+    "name": "Benue Homes",
+    "image": "/data/bedroom5.jpg",
+    "type": "Self Contain",
+    "price": 130000,
+    "amenities": ["Water", "Electricity", "Tile"],
+    "description": "Well maintained apartment located near JOSTUM second gate."
+  },
+  {
+    "id": 6,
+    "name": "Victory Lodge",
+    "image": "/data/bedroom6.jpg",
+    "type": "Single Room",
+    "price": 90000,
+    "amenities": ["Water", "Electricity", "Tile"],
+    "description": "Simple and neat single room apartment perfect for students."
+  },
+  {
+    "id": 7,
+    "name": "Sunrise Apartment",
+    "image": "/data/bedroom7.jpg",
+    "type": "One Bedroom",
+    "price": 200000,
+    "amenities": ["Water", "Electricity", "Kitchen", "Bathroom", "Tile"],
+    "description": "Newly built one bedroom apartment with modern fittings and secure environment."
+  },
+  {
+    "id": 8,
+    "name": "Greenfield Lodge",
+    "image": "/data/bedroom8.jpg",
+    "type": "Self Contain",
+    "price": 110000,
+    "amenities": ["Water", "Electricity"],
+    "description": "Affordable self contain with clean environment and steady light."
+  },
+  {
+    "id": 9,
+    "name": "Royal Haven",
+    "image": "/data/bedroom9.jpg",
+    "type": "One Bedroom",
+    "price": 220000,
+    "amenities": ["Water", "Electricity", "Kitchen", "Tile"],
+    "description": "Luxury apartment featuring kitchen and tiled floors in a quiet area."
+  },
+  {
+    "id": 10,
+    "name": "Peace Lodge",
+    "image": "/data/bedroom10.jpg",
+    "type": "Single Room",
+    "price": 75000,
+    "amenities": ["Water"],
+    "description": "Budget-friendly room option with easy access to campus shuttle."
+  },
+  {
+    "id": 11,
+    "name": "Hilltop Apartment",
+    "image": "/data/bedroom11.jpg",
+    "type": "Self Contain",
+    "price": 125000,
+    "amenities": ["Water", "Electricity", "Kitchen"],
+    "description": "Beautiful self contain located at the top of the hill with great view."
+  },
+  {
+    "id": 12,
+    "name": "Bright Homes",
+    "image": "/data/bedroom12.jpg",
+    "type": "Self Contain",
+    "price": 140000,
+    "amenities": ["Water", "Electricity", "Tile"],
+    "description": "Neat and spacious self contain apartment with steady power supply."
+  },
+  {
+    "id": 13,
+    "name": "Faith Apartment",
+    "image": "/data/bedroom13.jpg",
+    "type": "One Bedroom",
+    "price": 190000,
+    "amenities": ["Water", "Electricity", "Kitchen"],
+    "description": "Peaceful one bedroom flat with water system and clean environment."
+  },
+  {
+    "id": 14,
+    "name": "Zion Lodge",
+    "image": "/data/bedroom14.jpg",
+    "type": "Single Room",
+    "price": 85000,
+    "amenities": ["Water", "Electricity"],
+    "description": "Student-friendly lodge with essential amenities and nearby shops."
+  },
+  {
+    "id": 15,
+    "name": "Divine Homes",
+    "image": "/data/bedroom15.jpg",
+    "type": "Self Contain",
+    "price": 160000,
+    "amenities": ["Water", "Electricity", "Tile", "Kitchen"],
+    "description": "Tiled modern self contain with private kitchen and bathroom."
+  },
+  {
+    "id": 16,
+    "name": "Heritage Court",
+    "image": "/data/bedroom16.jpg",
+    "type": "One Bedroom",
+    "price": 210000,
+    "amenities": ["Water", "Electricity", "Kitchen", "Bathroom"],
+    "description": "Stylish apartment offering a comfortable living experience with modern facilities."
+  }
+]

@@ -2,19 +2,12 @@ import React from "react";
 import Header from "./subHome/Header";
 import SearchSection from "./subHome/SearchSection";
 import ApartmentCard from "./subHome/ApartmentCard";
+import data from "../../utils/data.json"
 
 const Home = () => {
 
-const apartment={
-    id: 1,
-    name: "Cozy Apartment",
-    image: "/bedroom.jpg",
-    type: "Self Contain",
-    price: 120000,
-    amenities: ["Water", "Electricity", "Kitchen"],
-    description: "A cozy apartment located in the heart of the city with all modern amenities.",
-    }
 
+    
   return (
     <div
     style={{
@@ -27,10 +20,16 @@ const apartment={
       style={
         {
             padding: "20px 16px",
+            paddingBottom: "80px",
 
         }
       }>
-        <ApartmentCard apartment={apartment}/>
+        {
+            data.map((data)=>(
+
+                <ApartmentCard apartment={data}/>
+            ))
+        }
       </div>
     </div>
   );

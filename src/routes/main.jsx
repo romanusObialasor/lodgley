@@ -48,7 +48,7 @@ export default function Main() {
       <Paper
         sx={{
           position: "fixed",
-          bottom: 10,
+          bottom: 5,
           left: "50%",
           transform: "translateX(-50%)",
           width: "90%",

@@ -1,6 +1,6 @@
 // src/routes/Router.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import Main from "./main";
 import Home from "../pages/Home/Home";
@@ -12,8 +12,9 @@ const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        {/* Main layout wraps other pages */}
+        {/* Main layout wraps all pages */}
         <Route path="/" element={<Main />}>
+          <Route index element={<Navigate to="/home" replace />} /> {/* ✅ Default route */}
           <Route path="home" element={<Home />} />
           <Route path="roommates" element={<Roommate />} />
           <Route path="saved" element={<Saved />} />

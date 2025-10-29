@@ -30,6 +30,17 @@ export default function Main() {
     // { label: "Settings", value: "/settings", icon: <SettingsIcon /> },
   ];
 
+  React.useEffect(() => {
+  // If path is "/", redirect to "/home"
+  if (location.pathname === "/") {
+    navigate("/home", { replace: true });
+    setValue("/home");
+  } else {
+    setValue(location.pathname);
+  }
+}, [location.pathname, navigate]);
+
+
   return (
     <>
       <Outlet /> {/* Active page renders here */}
@@ -37,7 +48,7 @@ export default function Main() {
       <Paper
         sx={{
           position: "fixed",
-          bottom: 20,
+          bottom: 10,
           left: "50%",
           transform: "translateX(-50%)",
           width: "90%",

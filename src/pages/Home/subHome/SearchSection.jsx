@@ -220,6 +220,7 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
         borderRadius: "8px",
         textTransform: "none",
         backgroundColor: "#1976d2",
+        py: 1,
         "&:hover": { backgroundColor: "#1565c0" },
       }}
     >

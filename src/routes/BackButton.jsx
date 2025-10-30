@@ -15,7 +15,7 @@ const BackButton = ({ to, label = "Back", iconOnly = false, sx }) => {
   return (
     <IconButton onClick={handleClick}>
       <ArrowBackIosIcon sx={{
-        fontSize: "30px",
+        fontSize: "24px",
     }} />
     </IconButton>
   )

@@ -1,17 +1,15 @@
 import React from "react";
-import { Box, Typography, IconButton, Chip, Grid, Card, CardMedia, CardContent } from "@mui/material";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Box, Typography, Chip, Grid, Card, CardMedia, CardContent } from "@mui/material";
 import { Water, Bathtub, Kitchen, GridView } from "@mui/icons-material";
 
-const ApartmentCard = ({ apartment, onClick, onLike }) => {
-  const [liked, setLiked] = React.useState(false);
+import { useNavigate } from "react-router-dom";
+import Like from "../../../utils/Like";
 
-  const handleLike = (e) => {
-    e.stopPropagation();
-    setLiked(!liked);
-    if (onLike) onLike(apartment.id);
-  };
+
+const ApartmentCard = ({ apartment }) => {
+  const navigate = useNavigate();
+
+
 
   const amenitiesIcons = {
     water: <Water fontSize="small" />,
@@ -21,7 +19,9 @@ const ApartmentCard = ({ apartment, onClick, onLike }) => {
   };
 
   return (
-    <Grid item xs={12} sm={6} onClick={onClick}>
+    <Grid item xs={12} sm={6} 
+    onClick={() => navigate(`/details/${apartment.id}`)}
+    >
       <Card
         sx={{
           borderRadius: "16px",
@@ -78,19 +78,7 @@ const ApartmentCard = ({ apartment, onClick, onLike }) => {
                 {apartment.description}
               </Typography>
             </Box>
-            <IconButton onClick={handleLike}
-            sx={{
-                backgroundColor: "white",
-                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                p: 1.2,
-            }}
-            >
-              {liked ? (
-                <FavoriteIcon color="error" />
-              ) : (
-                <FavoriteBorderIcon />
-              )}
-            </IconButton>
+            <Like />
           </Box>
 
           {/* Price */}

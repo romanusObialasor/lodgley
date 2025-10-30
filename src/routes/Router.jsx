@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import Roommate from "../pages/Roommate/Roommate";
 import Saved from "../pages/Saved/Saved";
 import Chat from "../pages/Chat/Chat";
+import Detail from "../pages/Home/detailPage/Detail";
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Route path="saved" element={<Saved />} />
           <Route path="chat" element={<Chat />} />
         </Route>
+          <Route path="/details/:id" element={<Detail />} />
       </Routes>
     </Router>
   );

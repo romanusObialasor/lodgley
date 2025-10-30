@@ -2,7 +2,8 @@
   {
     "id": 1,
     "name": "Cozy Apartment",
-    "image": "/data/bedroom1.jpg",
+    "coverImage": "/data/bedroom1.jpg",
+    "images": ["/data/bedroom1.jpg", "/data/bedroom2.webp", "/data/bedroom3.webp", "/data/bedroom4.jpg"],
     "type": "Self Contain",
     "price": 120000,
     "amenities": ["Water", "Electricity", "Kitchen"],
@@ -11,7 +12,8 @@
   {
     "id": 2,
     "name": "Comfort Lodge",
-    "image": "/data/bedroom2.webp",
+    "coverImage": "/data/bedroom2.webp",
+    "images": ["/data/bedroom2.webp", "/data/bedroom5.jpg", "/data/bedroom6.jpg", "/data/bedroom7.jpg"],
     "type": "Single Room",
     "price": 80000,
     "amenities": ["Water", "Electricity"],
@@ -20,7 +22,8 @@
   {
     "id": 3,
     "name": "Palm View Apartment",
-    "image": "/data/bedroom3.webp",
+    "coverImage": "/data/bedroom3.webp",
+    "images": ["/data/bedroom3.webp", "/data/bedroom8.jpg", "/data/bedroom9.jpg", "/data/bedroom10.jpg"],
     "type": "Self Contain",
     "price": 150000,
     "amenities": ["Water", "Electricity", "Tile", "Kitchen"],
@@ -29,7 +32,8 @@
   {
     "id": 4,
     "name": "Grace Villa",
-    "image": "/data/bedroom4.jpg",
+    "coverImage": "/data/bedroom4.jpg",
+    "images": ["/data/bedroom4.jpg", "/data/bedroom11.jpg", "/data/bedroom12.jpg", "/data/bedroom13.jpg"],
     "type": "One Bedroom",
     "price": 180000,
     "amenities": ["Water", "Electricity", "Kitchen", "Bathroom"],
@@ -38,7 +42,8 @@
   {
     "id": 5,
     "name": "Benue Homes",
-    "image": "/data/bedroom5.jpg",
+    "coverImage": "/data/bedroom5.jpg",
+    "images": ["/data/bedroom5.jpg", "/data/bedroom14.jpg", "/data/bedroom15.jpg", "/data/bedroom16.jpg"],
     "type": "Self Contain",
     "price": 130000,
     "amenities": ["Water", "Electricity", "Tile"],
@@ -47,7 +52,8 @@
   {
     "id": 6,
     "name": "Victory Lodge",
-    "image": "/data/bedroom6.jpg",
+    "coverImage": "/data/bedroom6.jpg",
+    "images": ["/data/bedroom6.jpg", "/data/bedroom1.jpg", "/data/bedroom3.webp", "/data/bedroom7.jpg"],
     "type": "Single Room",
     "price": 90000,
     "amenities": ["Water", "Electricity", "Tile"],
@@ -56,7 +62,8 @@
   {
     "id": 7,
     "name": "Sunrise Apartment",
-    "image": "/data/bedroom7.jpg",
+    "coverImage": "/data/bedroom7.jpg",
+    "images": ["/data/bedroom7.jpg", "/data/bedroom8.jpg", "/data/bedroom10.jpg", "/data/bedroom11.jpg"],
     "type": "One Bedroom",
     "price": 200000,
     "amenities": ["Water", "Electricity", "Kitchen", "Bathroom", "Tile"],
@@ -65,7 +72,8 @@
   {
     "id": 8,
     "name": "Greenfield Lodge",
-    "image": "/data/bedroom8.jpg",
+    "coverImage": "/data/bedroom8.jpg",
+    "images": ["/data/bedroom8.jpg", "/data/bedroom9.jpg", "/data/bedroom13.jpg", "/data/bedroom15.jpg"],
     "type": "Self Contain",
     "price": 110000,
     "amenities": ["Water", "Electricity"],
@@ -74,7 +82,8 @@
   {
     "id": 9,
     "name": "Royal Haven",
-    "image": "/data/bedroom9.jpg",
+    "coverImage": "/data/bedroom9.jpg",
+    "images": ["/data/bedroom9.jpg", "/data/bedroom10.jpg", "/data/bedroom12.jpg", "/data/bedroom14.jpg"],
     "type": "One Bedroom",
     "price": 220000,
     "amenities": ["Water", "Electricity", "Kitchen", "Tile"],
@@ -83,7 +92,8 @@
   {
     "id": 10,
     "name": "Peace Lodge",
-    "image": "/data/bedroom10.jpg",
+    "coverImage": "/data/bedroom10.jpg",
+    "images": ["/data/bedroom10.jpg", "/data/bedroom1.jpg", "/data/bedroom2.webp", "/data/bedroom5.jpg"],
     "type": "Single Room",
     "price": 75000,
     "amenities": ["Water"],
@@ -92,7 +102,8 @@
   {
     "id": 11,
     "name": "Hilltop Apartment",
-    "image": "/data/bedroom11.jpg",
+    "coverImage": "/data/bedroom11.jpg",
+    "images": ["/data/bedroom11.jpg", "/data/bedroom3.webp", "/data/bedroom7.jpg", "/data/bedroom16.jpg"],
     "type": "Self Contain",
     "price": 125000,
     "amenities": ["Water", "Electricity", "Kitchen"],
@@ -101,7 +112,8 @@
   {
     "id": 12,
     "name": "Bright Homes",
-    "image": "/data/bedroom12.jpg",
+    "coverImage": "/data/bedroom12.jpg",
+    "images": ["/data/bedroom12.jpg", "/data/bedroom9.jpg", "/data/bedroom13.jpg", "/data/bedroom14.jpg"],
     "type": "Self Contain",
     "price": 140000,
     "amenities": ["Water", "Electricity", "Tile"],
@@ -110,7 +122,8 @@
   {
     "id": 13,
     "name": "Faith Apartment",
-    "image": "/data/bedroom13.jpg",
+    "coverImage": "/data/bedroom13.jpg",
+    "images": ["/data/bedroom13.jpg", "/data/bedroom15.jpg", "/data/bedroom5.jpg", "/data/bedroom8.jpg"],
     "type": "One Bedroom",
     "price": 190000,
     "amenities": ["Water", "Electricity", "Kitchen"],
@@ -119,7 +132,8 @@
   {
     "id": 14,
     "name": "Zion Lodge",
-    "image": "/data/bedroom14.jpg",
+    "coverImage": "/data/bedroom14.jpg",
+    "images": ["/data/bedroom14.jpg", "/data/bedroom1.jpg", "/data/bedroom10.jpg", "/data/bedroom16.jpg"],
     "type": "Single Room",
     "price": 85000,
     "amenities": ["Water", "Electricity"],
@@ -128,7 +142,8 @@
   {
     "id": 15,
     "name": "Divine Homes",
-    "image": "/data/bedroom15.jpg",
+    "coverImage": "/data/bedroom15.jpg",
+    "images": ["/data/bedroom15.jpg", "/data/bedroom2.webp", "/data/bedroom4.jpg", "/data/bedroom9.jpg"],
     "type": "Self Contain",
     "price": 160000,
     "amenities": ["Water", "Electricity", "Tile", "Kitchen"],
@@ -137,7 +152,8 @@
   {
     "id": 16,
     "name": "Heritage Court",
-    "image": "/data/bedroom16.jpg",
+    "coverImage": "/data/bedroom16.jpg",
+    "images": ["/data/bedroom16.jpg", "/data/bedroom6.jpg", "/data/bedroom7.jpg", "/data/bedroom8.jpg"],
     "type": "One Bedroom",
     "price": 210000,
     "amenities": ["Water", "Electricity", "Kitchen", "Bathroom"],

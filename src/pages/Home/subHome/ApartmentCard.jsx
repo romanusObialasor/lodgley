@@ -36,7 +36,7 @@ const ApartmentCard = ({ apartment }) => {
           <CardMedia
             component="img"
             height="180"
-            image={apartment.image}
+            image={apartment.coverImage}
             alt={apartment.name}
            
           />

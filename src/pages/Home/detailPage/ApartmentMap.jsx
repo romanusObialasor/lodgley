@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { MapContainer, TileLayer, Marker, Polyline, Popup } from "react-leaflet";
 import { haversineDistanceKm } from "../../../utils/distance";
 
-const DEFAULT_SCHOOL = { lat: 7.7330, lng: 8.5360 }; // replace with actual school coords
+const DEFAULT_SCHOOL = { lat: 7.76745162664026, lng: 8.62053215016805 }; // replace with actual school coords
 
 // Props: apartment = { location: { lat, lng }, name, ... }
 export default function ApartmentMap({ apartment, school = DEFAULT_SCHOOL }) {
@@ -36,7 +36,7 @@ export default function ApartmentMap({ apartment, school = DEFAULT_SCHOOL }) {
           {/* School marker */}
           <Marker position={[school.lat, school.lng]}>
             <Popup>
-              School (reference point)
+              Convocation Square (Jostum)
             </Popup>
           </Marker>
 
@@ -58,7 +58,7 @@ export default function ApartmentMap({ apartment, school = DEFAULT_SCHOOL }) {
       <Box sx={{ mt: 1 }}>
         {distanceKm != null ? (
           <Typography variant="body2" color="text.secondary">
-            ~{distanceKm.toFixed(2)} km from the school reference point
+            ~{distanceKm.toFixed(2)} km from the Convocation square
           </Typography>
         ) : (
           <Typography variant="body2" color="text.secondary">

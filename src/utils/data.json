@@ -7,7 +7,8 @@
     "type": "Self Contain",
     "price": 120000,
     "amenities": ["Water", "Electricity", "Kitchen"],
-    "description": "A cozy apartment located in the heart of the city with all modern amenities."
+    "description": "A cozy apartment located in the heart of the city with all modern amenities.",
+    "location": { "lat": 7.7729, "lng": 8.6188 }
   },
   {
     "id": 2,
@@ -18,7 +19,7 @@
     "price": 80000,
     "amenities": ["Water", "Electricity"],
     "description": "Affordable single room apartment close to JOSTUM campus with reliable water supply.",
-    "location": { "lat": 7.7335, "lng": 8.5368 }
+    "location": { "lat": 7.7733, "lng": 8.6191 }
   },
   {
     "id": 3,
@@ -28,7 +29,8 @@
     "type": "Self Contain",
     "price": 150000,
     "amenities": ["Water", "Electricity", "Tile", "Kitchen"],
-    "description": "Modern self contain apartment with tiled floors and constant electricity."
+    "description": "Modern self contain apartment with tiled floors and constant electricity.",
+    "location": { "lat": 7.7730, "lng": 8.6194 }
   },
   {
     "id": 4,
@@ -38,7 +40,8 @@
     "type": "One Bedroom",
     "price": 180000,
     "amenities": ["Water", "Electricity", "Kitchen", "Bathroom"],
-    "description": "Spacious one bedroom flat ideal for students and young professionals."
+    "description": "Spacious one bedroom flat ideal for students and young professionals.",
+    "location": { "lat": 7.7736, "lng": 8.6199 }
   },
   {
     "id": 5,
@@ -48,7 +51,8 @@
     "type": "Self Contain",
     "price": 130000,
     "amenities": ["Water", "Electricity", "Tile"],
-    "description": "Well maintained apartment located near JOSTUM second gate."
+    "description": "Well maintained apartment located near JOSTUM second gate.",
+    "location": { "lat": 7.7740, "lng": 8.6201 }
   },
   {
     "id": 6,
@@ -58,7 +62,8 @@
     "type": "Single Room",
     "price": 90000,
     "amenities": ["Water", "Electricity", "Tile"],
-    "description": "Simple and neat single room apartment perfect for students."
+    "description": "Simple and neat single room apartment perfect for students.",
+    "location": { "lat": 7.7738, "lng": 8.6187 }
   },
   {
     "id": 7,
@@ -68,7 +73,8 @@
     "type": "One Bedroom",
     "price": 200000,
     "amenities": ["Water", "Electricity", "Kitchen", "Bathroom", "Tile"],
-    "description": "Newly built one bedroom apartment with modern fittings and secure environment."
+    "description": "Newly built one bedroom apartment with modern fittings and secure environment.",
+    "location": { "lat": 7.7742, "lng": 8.6195 }
   },
   {
     "id": 8,
@@ -78,7 +84,8 @@
     "type": "Self Contain",
     "price": 110000,
     "amenities": ["Water", "Electricity"],
-    "description": "Affordable self contain with clean environment and steady light."
+    "description": "Affordable self contain with clean environment and steady light.",
+    "location": { "lat": 7.7745, "lng": 8.6192 }
   },
   {
     "id": 9,
@@ -88,7 +95,8 @@
     "type": "One Bedroom",
     "price": 220000,
     "amenities": ["Water", "Electricity", "Kitchen", "Tile"],
-    "description": "Luxury apartment featuring kitchen and tiled floors in a quiet area."
+    "description": "Luxury apartment featuring kitchen and tiled floors in a quiet area.",
+    "location": { "lat": 7.7747, "lng": 8.6189 }
   },
   {
     "id": 10,
@@ -98,7 +106,8 @@
     "type": "Single Room",
     "price": 75000,
     "amenities": ["Water"],
-    "description": "Budget-friendly room option with easy access to campus shuttle."
+    "description": "Budget-friendly room option with easy access to campus shuttle.",
+    "location": { "lat": 7.7732, "lng": 8.6186 }
   },
   {
     "id": 11,
@@ -108,7 +117,8 @@
     "type": "Self Contain",
     "price": 125000,
     "amenities": ["Water", "Electricity", "Kitchen"],
-    "description": "Beautiful self contain located at the top of the hill with great view."
+    "description": "Beautiful self contain located at the top of the hill with great view.",
+    "location": { "lat": 7.7741, "lng": 8.6188 }
   },
   {
     "id": 12,
@@ -118,7 +128,8 @@
     "type": "Self Contain",
     "price": 140000,
     "amenities": ["Water", "Electricity", "Tile"],
-    "description": "Neat and spacious self contain apartment with steady power supply."
+    "description": "Neat and spacious self contain apartment with steady power supply.",
+    "location": { "lat": 7.7734, "lng": 8.6202 }
   },
   {
     "id": 13,
@@ -128,7 +139,8 @@
     "type": "One Bedroom",
     "price": 190000,
     "amenities": ["Water", "Electricity", "Kitchen"],
-    "description": "Peaceful one bedroom flat with water system and clean environment."
+    "description": "Peaceful one bedroom flat with water system and clean environment.",
+    "location": { "lat": 7.7737, "lng": 8.6198 }
   },
   {
     "id": 14,
@@ -138,7 +150,8 @@
     "type": "Single Room",
     "price": 85000,
     "amenities": ["Water", "Electricity"],
-    "description": "Student-friendly lodge with essential amenities and nearby shops."
+    "description": "Student-friendly lodge with essential amenities and nearby shops.",
+    "location": { "lat": 7.7743, "lng": 8.6185 }
   },
   {
     "id": 15,
@@ -148,7 +161,8 @@
     "type": "Self Contain",
     "price": 160000,
     "amenities": ["Water", "Electricity", "Tile", "Kitchen"],
-    "description": "Tiled modern self contain with private kitchen and bathroom."
+    "description": "Tiled modern self contain with private kitchen and bathroom.",
+    "location": { "lat": 7.7748, "lng": 8.6196 }
   },
   {
     "id": 16,
@@ -158,6 +172,7 @@
     "type": "One Bedroom",
     "price": 210000,
     "amenities": ["Water", "Electricity", "Kitchen", "Bathroom"],
-    "description": "Stylish apartment offering a comfortable living experience with modern facilities."
+    "description": "Stylish apartment offering a comfortable living experience with modern facilities.",
+    "location": { "lat": 7.7735, "lng": 8.6190 }
   }
 ]

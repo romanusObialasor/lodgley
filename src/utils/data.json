@@ -17,7 +17,8 @@
     "type": "Single Room",
     "price": 80000,
     "amenities": ["Water", "Electricity"],
-    "description": "Affordable single room apartment close to JOSTUM campus with reliable water supply."
+    "description": "Affordable single room apartment close to JOSTUM campus with reliable water supply.",
+    "location": { "lat": 7.7335, "lng": 8.5368 }
   },
   {
     "id": 3,

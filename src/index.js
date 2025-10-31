@@ -3,8 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "leaflet/dist/leaflet.css";
+import applyLeafletIconFix from "./utils/leafletIconFix";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+applyLeafletIconFix();
 root.render(
   <React.StrictMode>
     <App />

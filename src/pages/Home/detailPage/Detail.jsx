@@ -6,6 +6,7 @@ import ApartmentInfo from "./ApartmentInfo";
 
 // Temporary sample data (you can import this from a separate file)
 import data from "../../../utils/data.json"; // adjust path
+import ApartmentPriceDescription from "./ApartmentPriceDescription";
 
 const Detail = () => {
   const { id } = useParams();
@@ -18,8 +19,9 @@ const Detail = () => {
   return (
     <div>
       <DetailHeader />
-      <ApartmentImageCarousel images={apartment.images || [apartment.image]} />
+      <ApartmentImageCarousel images={apartment.images || [apartment.image]} apartment={apartment} />
       <ApartmentInfo apartment={apartment} />
+      <ApartmentPriceDescription apartment={apartment} />
     </div>
   );
 };

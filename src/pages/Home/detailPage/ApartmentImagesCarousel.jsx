@@ -56,7 +56,7 @@ const ApartmentImageCarousel = ({ images, apartment }) => {
       </Slider>
       <Chip
             // label={apartment.type}
-            label={"Self Contain"}
+            label={apartment.type}
             size="small"
             sx={{
               position: "absolute",

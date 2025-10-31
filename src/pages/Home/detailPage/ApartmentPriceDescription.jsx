@@ -14,6 +14,10 @@ const ApartmentPriceDescription = ({ apartment }) => {
       <Divider sx={{ my: 1.5 }} />
 
       {/* Description */}
+      <Typography variant="subtitle1" sx={{ mb: 1, fontWeight: 600 }}>
+              Description 
+            </Typography>
+      
       <Typography
         variant="body2"
         sx={{

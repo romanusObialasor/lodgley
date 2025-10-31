@@ -8,6 +8,7 @@ import ApartmentInfo from "./ApartmentInfo";
 import data from "../../../utils/data.json"; // adjust path
 import ApartmentPriceDescription from "./ApartmentPriceDescription";
 import ApartmentMap from "./ApartmentMap";
+import CallToLodgeButton from "../../../routes/CallToLodgeButton";
 
 const Detail = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const Detail = () => {
       <ApartmentInfo apartment={apartment} />
       <ApartmentPriceDescription apartment={apartment} />
       <ApartmentMap apartment={apartment}/>
+      <CallToLodgeButton phoneNumber={"+2347015514272"}/>
     </div>
   );
 };

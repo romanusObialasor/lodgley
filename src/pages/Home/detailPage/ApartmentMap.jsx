@@ -15,7 +15,7 @@ export default function ApartmentMap({ apartment, school = DEFAULT_SCHOOL }) {
   const distanceKm = apt ? haversineDistanceKm(apt.lat, apt.lng, school.lat, school.lng) : null;
 
   return (
-    <Box sx={{ mt: 3, mx: 2 }}>
+    <Box sx={{ mt: 3, mx: 2, pb: 10 }}>
       <Typography variant="subtitle1" sx={{ mb: 1, fontWeight: 600 }}>
         Location
       </Typography>
@@ -35,7 +35,7 @@ export default function ApartmentMap({ apartment, school = DEFAULT_SCHOOL }) {
 
           {/* School marker */}
           <Marker position={[school.lat, school.lng]}>
-            <Popup>
+            <Popup open>
               Convocation Square (Jostum)
             </Popup>
           </Marker>
@@ -44,13 +44,13 @@ export default function ApartmentMap({ apartment, school = DEFAULT_SCHOOL }) {
           {apt && (
             <>
               <Marker position={[apt.lat, apt.lng]}>
-                <Popup>{apartment.name || "Apartment"}</Popup>
+                <Popup open>{apartment.name || "Apartment"}</Popup>
               </Marker>
 
               {/* line between points */}
               <Polyline positions={[[school.lat, school.lng], [apt.lat, apt.lng]]} pathOptions={{ color: "#1976d2" }} />
             </>
-          )}
+          )} 
         </MapContainer>
       </Box>
 

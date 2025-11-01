@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {
   Box,
   Typography,
-  Button,
   IconButton,
   Checkbox,
   FormControlLabel,
@@ -16,6 +15,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
 import CustomInput from "../../components/CustomInput";
+import CustomButton from "../../components/CustomButton";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -33,148 +33,149 @@ export default function Login() {
 
     setError("");
     // ✅ TODO: Connect to backend (axios POST)
-    navigate("/main");
+    navigate("/");
   };
 
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        // display: "flex",
-        // justifyContent: "center",
-        // alignItems: "center",
         px: 3,
       }}
     >
-
-        {/* Back Button */}
-       <Box sx={{
-        display: "flex",
-        alignItems: "center",
-        mt: 5,
-        justifyContent: "space-between"
-       }}>
-        <IconButton onClick={() => navigate(-1)} size="small" sx={{
+      {/* Back Button */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          mt: 5,
+          justifyContent: "space-between",
+        }}
+      >
+        <IconButton
+          onClick={() => navigate(-1)}
+          size="small"
+          sx={{
             border: "1px solid #ddd",
             p: 1,
-            borderRadius: "8px"
-        }}>
+            borderRadius: "8px",
+          }}
+        >
           <ArrowBackIosNewIcon />
         </IconButton>
         <img src="/mainLogo.png" alt="Lodgely Logo" width={80} />
       </Box>
-        {/* Title */}
-        <Typography  fontWeight={700} mt={6} mb={2}
+
+      {/* Title */}
+      <Typography
+        fontWeight={700}
+        mt={6}
+        mb={2}
         sx={{
-            fontSize: "28px",
+          fontSize: "28px",
         }}
-        >
-          Log in
-        </Typography>
+      >
+        Log in
+      </Typography>
 
-        {/* Login Form */}
-        <form onSubmit={handleLogin}>
+      {/* Login Form */}
+      <form onSubmit={handleLogin}>
+        <CustomInput
+          label="Email Address"
+          value={email}
+          onChange={(value) => setEmail(value)} // ✅ fixed
+          margin="normal"
+        />
+
+        <Box sx={{ position: "relative" }}>
           <CustomInput
-            label="Email Address"
-            variant="outlined"
-            fullWidth
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            label="Password"
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(value) => setPassword(value)} // ✅ fixed
             margin="normal"
-            
           />
-
-          <Box sx={{ position: "relative" }}>
-            <CustomInput
-              label="Password"
-              type={showPassword ? "text" : "password"}
-              variant="outlined"
-              fullWidth
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              margin="normal"
-            />
-            <IconButton
-              onClick={() => setShowPassword((prev) => !prev)}
-              sx={{ position: "absolute", right: 10, top: "35%" }}
-            >
-              {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-            </IconButton>
-          </Box>
-
-          {error && (
-            <Typography color="error" variant="body2" mt={0.5}>
-              {error}
-            </Typography>
-          )}
-
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              mt: 1,
-            }}
+          <IconButton
+            onClick={() => setShowPassword((prev) => !prev)}
+            sx={{ position: "absolute", right: 10, top: "35%" }}
           >
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={remember}
-                  onChange={() => setRemember(!remember)}
-                  color="primary"
-                />
-              }
-              label="Remember me"
-            />
-            <Typography
-              variant="body2"
-              sx={{
-                color: "primary.main",
-                cursor: "pointer",
-                "&:hover": { textDecoration: "underline" },
-              }}
-              onClick={() => navigate("/forgot-password")}
-            >
-              Forgot password?
-            </Typography>
-          </Box>
-
-          <Button
-            type="submit"
-            variant="contained"
-            fullWidth
-            sx={{ mt: 3, py: 1.5, fontWeight: 600 }}
-          >
-            Log in
-          </Button>
-        </form>
-
-        {/* Divider */}
-        <Divider sx={{ my: 3, opacity: 0.6  }}>Or Login with</Divider>
-
-        {/* Social Login */}
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 4 }}>
-          <IconButton sx={{ border: "1px solid #ddd", borderRadius: 1, px: 5, py: 1.4  }}>
-            <GoogleIcon />
-          </IconButton>
-          <IconButton sx={{ border: "1px solid #ddd",  borderRadius: 1, px: 5, py: 1.4   }}>
-            <AppleIcon />
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </IconButton>
         </Box>
 
-        {/* Sign Up */}
-        <Typography align="center" mt={3} variant="body2">
-          Don’t have an account?{" "}
-          <Typography
-            component="span"
-            color="primary"
-            fontWeight={600}
-            sx={{ cursor: "pointer" }}
-            onClick={() => navigate("/signup")}
-          >
-            Sign up
+        {error && (
+          <Typography color="error" variant="body2" mt={0.5}>
+            {error}
           </Typography>
+        )}
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            mt: 1,
+          }}
+        >
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={remember}
+                onChange={() => setRemember(!remember)}
+                color="primary"
+              />
+            }
+            label="Remember me"
+          />
+          <Typography
+            variant="body2"
+            sx={{
+              color: "primary.main",
+              cursor: "pointer",
+              "&:hover": { textDecoration: "underline" },
+            }}
+            onClick={() => navigate("/forgot-password")}
+          >
+            Forgot password?
+          </Typography>
+        </Box>
+
+        <CustomButton text="LOG IN" sx={{
+            mt: 3
+        }}
+        type="submit"/>
+      </form>
+
+      {/* Divider */}
+      <Divider sx={{ my: 3, opacity: 0.6 }}>Or Login with</Divider>
+
+      {/* Social Login */}
+      <Box sx={{ display: "flex", justifyContent: "center", gap: 4 }}>
+        <IconButton
+          sx={{ border: "1px solid #ddd", borderRadius: 1, px: 5, py: 1.4 }}
+        >
+          <GoogleIcon />
+        </IconButton>
+        <IconButton
+          sx={{ border: "1px solid #ddd", borderRadius: 1, px: 5, py: 1.4 }}
+        >
+          <AppleIcon />
+        </IconButton>
+      </Box>
+
+      {/* Sign Up */}
+      <Typography align="center" mt={3} variant="body2">
+        Don’t have an account?{" "}
+        <Typography
+          component="span"
+          color="primary"
+          fontWeight={600}
+          sx={{ cursor: "pointer" }}
+          onClick={() => navigate("/signup")}
+        >
+          Sign up
         </Typography>
+      </Typography>
     </Box>
   );
 }

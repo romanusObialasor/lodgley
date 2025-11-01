@@ -81,6 +81,7 @@ export default function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             margin="normal"
+            
           />
 
           <Box sx={{ position: "relative" }}>
@@ -142,7 +143,7 @@ export default function Login() {
             type="submit"
             variant="contained"
             fullWidth
-            sx={{ mt: 3, py: 1.2, fontWeight: 600 }}
+            sx={{ mt: 3, py: 1.5, fontWeight: 600 }}
           >
             Log in
           </Button>

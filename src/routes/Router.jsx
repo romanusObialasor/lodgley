@@ -10,6 +10,7 @@ import Chat from "../pages/Chat/Chat";
 import Detail from "../pages/Home/detailPage/Detail";
 import Profile from "../pages/Home/Profile/Profile";
 import Login from "../pages/Auth/Login";
+import Signup from "../pages/Auth/Signup";
 
 const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter = () => {
           <Route path="/details/:id" element={<Detail />} />
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
       </Routes>
     </Router>
   );

@@ -134,7 +134,7 @@ export default function Login() {
               cursor: "pointer",
               "&:hover": { textDecoration: "underline" },
             }}
-            onClick={() => navigate("/forgot-password")}
+            onClick={() => navigate("/forgotPassword")}
           >
             Forgot password?
           </Typography>

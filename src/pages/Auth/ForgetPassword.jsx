@@ -31,7 +31,7 @@ export default function ForgotPassword() {
 
     // Simulate sending email
     setTimeout(() => {
-      navigate("/reset-password"); // navigate to reset password page
+      navigate("/resetPassword"); // navigate to reset password page
     }, 1500);
   };
 

@@ -13,6 +13,7 @@ import Login from "../pages/Auth/Login";
 import Signup from "../pages/Auth/Signup";
 import EmailVerification from "../pages/Auth/EmailVerification";
 import ForgotPassword from "../pages/Auth/ForgetPassword";
+import ResetPassword from "../pages/Auth/ResetPassword";
 
 const AppRouter = () => {
   return (
@@ -32,6 +33,7 @@ const AppRouter = () => {
           <Route path="signup" element={<Signup />} />
           <Route path="emailVerification" element={<EmailVerification />} />
           <Route path="forgotPassword" element={<ForgotPassword />} />
+          <Route path="resetPassword" element={<ResetPassword />} />
       </Routes>
     </Router>
   );

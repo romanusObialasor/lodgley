@@ -1,8 +1,8 @@
 // src/pages/Home/subHome/Header.jsx
 import React from "react";
-import { Avatar, Box, Typography, IconButton, Badge } from "@mui/material";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import { Avatar, Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import NotificationDropdown from "../Notification/Notififcation";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -54,28 +54,10 @@ export default function Header() {
       </Box>
 
       {/* Right - Notifications */}
-      <IconButton
-        sx={{
-          p: 1.3,
-          borderRadius: "50%",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Badge
-          color="error"
-          variant="dot"
-          overlap="circular"
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-        >
-          <NotificationsNoneIcon sx={{ color: "#45484a", fontSize: 20 }} />
-        </Badge>
-      </IconButton>
+      
+       <div style={{ display: "flex", justifyContent: "flex-end", padding: "10px" }}>
+      <NotificationDropdown />
+    </div>
     </Box>
   );
 }

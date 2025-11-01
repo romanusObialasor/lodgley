@@ -25,7 +25,6 @@ export default function SearchSection({ onSearchChange, onFilterChange }) {
     type: "",
   });
 
-  const amenitiesList = ["Wi-Fi", "Water", "Electricity", "Kitchen"];
   const typeOptions = ["Single Room", "Self Contain", "Flat"];
 
   const handleSearchChange = (e) => {

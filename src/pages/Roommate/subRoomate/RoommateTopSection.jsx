@@ -1,4 +1,3 @@
-// src/pages/RoommateTopSection.jsx
 import React, { useState } from "react";
 import {
   Box,
@@ -8,14 +7,35 @@ import {
   Drawer,
   Stack,
   Chip,
+  Button,
+  Divider,
 } from "@mui/material";
 import TuneIcon from "@mui/icons-material/Tune";
 
-export default function RoommateTopSection() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+const ALL_FILTERS = ["Male", "Female", "Engineering", "Medical", "Art", "Law"];
 
-  const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
+export default function RoommateTopSection({ onApplyFilters, selectedFilters }) {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [tempFilters, setTempFilters] = useState(selectedFilters || []);
+
+  const handleDrawerToggle = () => setDrawerOpen(!drawerOpen);
+
+  const toggleFilter = (filter) => {
+    if (tempFilters.includes(filter)) {
+      setTempFilters(tempFilters.filter((f) => f !== filter));
+    } else {
+      setTempFilters([...tempFilters, filter]);
+    }
+  };
+
+  const handleApply = () => {
+    onApplyFilters(tempFilters);
+    setDrawerOpen(false);
+  };
+
+  const handleClear = () => {
+    setTempFilters([]);
+    onApplyFilters([]);
   };
 
   return (
@@ -27,26 +47,22 @@ export default function RoommateTopSection() {
         p: 1,
         borderBottom: "1px solid #e3efff",
         backgroundColor: "#fff",
+        pb: 2,
       }}
     >
       {/* Left: Avatar, Name, Status */}
       <Stack direction="row" alignItems="center" spacing={2}>
         <Avatar
           alt="User Avatar"
-        src="https://avatar.iran.liara.run/public"
+          src="https://avatar.iran.liara.run/public"
           sx={{ width: 48, height: 48 }}
         />
-        <Box
-        sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-        }}>
+        <Box>
           <Typography variant="subtitle1" fontWeight="bold">
             Romanus Obialasor
           </Typography>
           <Chip
-            label="Needs a Room"
+            label="Looking for Roommate"
             color="primary"
             size="small"
             sx={{
@@ -55,7 +71,6 @@ export default function RoommateTopSection() {
               borderRadius: "6px",
               mt: 0.3,
               width: "fit-content",
-            //   padding: "4px 6px",
               px: 1,
             }}
           />
@@ -63,22 +78,19 @@ export default function RoommateTopSection() {
       </Stack>
 
       {/* Right: Filter Icon */}
-   
       <IconButton
         onClick={handleDrawerToggle}
-          sx={{
-            backgroundColor: "white",
-            color: "gray",
-            borderRadius: "10px",
-            p: 1.2,
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-
-            "&:hover": { color: "#1565c0" },
-
-          }}
-        >
-          <TuneIcon />
-        </IconButton>
+        sx={{
+          backgroundColor: "white",
+          color: "gray",
+          borderRadius: "10px",
+          p: 1.2,
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+          "&:hover": { color: "#1565c0" },
+        }}
+      >
+        <TuneIcon />
+      </IconButton>
 
       {/* Drawer */}
       <Drawer
@@ -93,9 +105,57 @@ export default function RoommateTopSection() {
           },
         }}
       >
-        <Typography variant="h6" textAlign="center">
-          Drawer
+        <Typography variant="h6" textAlign="center" mb={2}>
+          Filter Options
         </Typography>
+
+        <Stack direction="row" flexWrap="wrap" gap={1.2}>
+          {ALL_FILTERS.map((filter) => (
+            <Chip
+              key={filter}
+              label={filter}
+              onClick={() => toggleFilter(filter)}
+              color={tempFilters.includes(filter) ? "primary" : "default"}
+              variant={tempFilters.includes(filter) ? "filled" : "outlined"}
+              sx={{ borderRadius: "8px", fontSize: "0.8rem" }}
+            />
+          ))}
+        </Stack>
+
+        <Divider sx={{ my: 3 }} />
+
+        <Stack direction="row" spacing={2}>
+          <Button
+            fullWidth
+            variant="outlined"
+            // color="error"
+            onClick={handleClear}
+            sx={{
+                 borderRadius: "8px",
+        textTransform: "none",
+        color: "#1976d2",
+        borderColor: "#1976d2",
+        "&:hover": { backgroundColor: "#e3f2fd" },
+            }}
+          >
+            Clear All
+          </Button>
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={handleApply}
+            sx={{
+                 borderRadius: "8px",
+        textTransform: "none",
+        backgroundColor: "#1976d2",
+        py: 1,
+        "&:hover": { backgroundColor: "#1565c0" },
+            }}
+          >
+            Apply
+          </Button>
+        </Stack>
       </Drawer>
     </Box>
   );

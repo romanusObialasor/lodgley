@@ -1,12 +1,11 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import RoommateTopSection from "./subRoomate/RoommateTopSection";
 
 const Roommate = () => {
   return (
     <Box sx={{ p: 2, textAlign: "center" }}>
-      <Typography variant="h5" color="primary">
-        Welcome to Lodgely/Roommate 🏠
-      </Typography>
+      <RoommateTopSection />
     </Box>
   );
 };

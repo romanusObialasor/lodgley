@@ -27,6 +27,8 @@ const AppRouter = () => {
           <Route path="saved" element={<Saved />} />
           <Route path="chat" element={<Chat />} />
         </Route>
+
+        {/* this is for all the subhome page*/}
           <Route path="/details/:id" element={<Detail />} />
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<Login />} />
@@ -34,6 +36,8 @@ const AppRouter = () => {
           <Route path="emailVerification" element={<EmailVerification />} />
           <Route path="forgotPassword" element={<ForgotPassword />} />
           <Route path="resetPassword" element={<ResetPassword />} />
+
+          
       </Routes>
     </Router>
   );

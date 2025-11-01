@@ -8,6 +8,8 @@ import Roommate from "../pages/Roommate/Roommate";
 import Saved from "../pages/Saved/Saved";
 import Chat from "../pages/Chat/Chat";
 import Detail from "../pages/Home/detailPage/Detail";
+import Profile from "../pages/Home/Profile/Profile";
+import Login from "../pages/Auth/Login";
 
 const AppRouter = () => {
   return (
@@ -22,6 +24,8 @@ const AppRouter = () => {
           <Route path="chat" element={<Chat />} />
         </Route>
           <Route path="/details/:id" element={<Detail />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="login" element={<Login />} />
       </Routes>
     </Router>
   );

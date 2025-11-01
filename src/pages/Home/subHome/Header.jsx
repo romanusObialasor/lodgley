@@ -2,8 +2,22 @@
 import React from "react";
 import { Avatar, Box, Typography, IconButton, Badge } from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+  
+  // Temporary user auth state (later, replace with real auth logic)
+  const isLoggedIn = false; 
+
+  const handleAvatarClick = () => {
+    if (isLoggedIn) {
+      navigate("/profile");
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -19,7 +33,8 @@ export default function Header() {
       <Avatar
         alt="User"
         src="https://avatar.iran.liara.run/public"
-        sx={{ width: 45, height: 45 }}
+        sx={{ width: 45, height: 45, cursor: "pointer" }}
+        onClick={handleAvatarClick}
       />
 
       {/* Middle - Location */}
@@ -39,26 +54,26 @@ export default function Header() {
       </Box>
 
       {/* Right - Notifications */}
-      <IconButton sx={{
-             p: 1.3,
-             borderRadius: "50%",
-             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-             display: "flex",
-             alignItems: "center",
-             justifyContent: "center",
-            }}>
-
-            <Badge
-              color="error"
-              variant="dot"
-              overlap="circular"
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-            
-            >
-             <NotificationsNoneIcon sx={{ color: "#45484a", fontSize: 20 }} />
+      <IconButton
+        sx={{
+          p: 1.3,
+          borderRadius: "50%",
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Badge
+          color="error"
+          variant="dot"
+          overlap="circular"
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+        >
+          <NotificationsNoneIcon sx={{ color: "#45484a", fontSize: 20 }} />
         </Badge>
       </IconButton>
     </Box>

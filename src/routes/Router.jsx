@@ -11,6 +11,7 @@ import Detail from "../pages/Home/detailPage/Detail";
 import Profile from "../pages/Home/Profile/Profile";
 import Login from "../pages/Auth/Login";
 import Signup from "../pages/Auth/Signup";
+import EmailVerification from "../pages/Auth/EmailVerification";
 
 const AppRouter = () => {
   return (
@@ -28,6 +29,7 @@ const AppRouter = () => {
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="emailVerification" element={<EmailVerification />} />
       </Routes>
     </Router>
   );

@@ -59,7 +59,7 @@ export default function Signup() {
       // Simulate signup API call
       setTimeout(() => {
         setLoading(false);
-        navigate("/home");
+        navigate("/emailVerification");
       }, 1500);
     } catch (error) {
       setLoading(false);

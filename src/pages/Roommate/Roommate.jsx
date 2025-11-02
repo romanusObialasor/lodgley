@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box } from "@mui/material";
 import RoommateTopSection from "./subRoomate/RoommateTopSection";
 import RoommateFiltersSection from "./subRoomate/RoommateFilterSection";
+import RoommateSwipeSection from "./subRoomate/RoommasteSwipeSection";
 
 const Roommate = () => {
   const [filters, setFilters] = useState([]);
@@ -24,6 +25,7 @@ const Roommate = () => {
         activeFilters={filters}
         onRemove={handleRemoveFilter}
       />
+      <RoommateSwipeSection />
     </Box>
   );
 };

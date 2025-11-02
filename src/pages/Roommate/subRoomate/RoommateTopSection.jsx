@@ -62,7 +62,7 @@ export default function RoommateTopSection({ onApplyFilters, selectedFilters }) 
             Romanus Obialasor
           </Typography>
           <Chip
-            label="Looking for Roommate"
+            label="Has a Room"
             color="primary"
             size="small"
             sx={{

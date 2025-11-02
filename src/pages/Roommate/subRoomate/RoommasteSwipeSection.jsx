@@ -40,7 +40,7 @@ const SwipeCard = ({ roommate, onSwipe }) => {
         }}
       >
         {/* Image */}
-        <Box sx={{ position: "relative", width: "100%",  height: 420 }}>
+        <Box sx={{ position: "relative", width: "100%",  height: 450 }}>
           <img
             src={roommate.avatar}
             alt={`${roommate.name} Avatar`}
@@ -261,7 +261,7 @@ export default function RoommateSwipeSection() {
   };
 
   return (
-    <Box mt={1} sx={{ position: "relative", height:420, overflow: "hidden",   
+    <Box mt={1} sx={{ position: "relative", height:450, overflow: "hidden",   
           borderRadius: 4,
 
     }}>
